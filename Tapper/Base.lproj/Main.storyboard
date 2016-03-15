@@ -34,24 +34,19 @@
                                     <constraint firstAttribute="width" constant="249" id="mgH-in-YZe"/>
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Qf-1D-Q6G"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-cz-RMa" userLabel="tapsTxt">
-                                <rect key="frame" x="176" y="369" width="249" height="30"/>
+                                <rect key="frame" x="176" y="369" width="249" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="249" id="0iI-3G-1hn"/>
                                     <constraint firstAttribute="height" constant="45" id="730-bh-2BA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ4-gq-9yW" userLabel="coinButton">
-                                <rect key="frame" x="214" y="28" width="172" height="177"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="Fko-7x-o10"/>
-                                    <constraint firstAttribute="height" constant="177" id="JLE-Tx-qDz"/>
-                                </constraints>
-                                <state key="normal" image="coin"/>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1,000 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1G-7W-atU" userLabel="tapLabel">
                                 <rect key="frame" x="164" y="233" width="273" height="87"/>
                                 <constraints>
@@ -62,23 +57,33 @@
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ4-gq-9yW" userLabel="coinButton">
+                                <rect key="frame" x="214" y="39" width="172" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="Fko-7x-o10"/>
+                                    <constraint firstAttribute="height" constant="177" id="JLE-Tx-qDz"/>
+                                </constraints>
+                                <state key="normal" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyN-za-lKi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bPF-wb-kPV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="31O-eM-B8f"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Oe-7i-ryz" secondAttribute="bottom" constant="59" id="3FA-pg-7CL"/>
-                            <constraint firstItem="BZ4-gq-9yW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7Er-iX-SBU"/>
                             <constraint firstItem="8D9-ls-9M9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BnY-k8-yiH"/>
                             <constraint firstItem="3Oe-7i-ryz" firstAttribute="centerX" secondItem="HBm-cz-RMa" secondAttribute="centerX" id="CQb-tq-pL0"/>
                             <constraint firstItem="o1G-7W-atU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSz-gO-tQs"/>
-                            <constraint firstItem="o1G-7W-atU" firstAttribute="top" secondItem="BZ4-gq-9yW" secondAttribute="bottom" constant="33" id="NnW-Ok-E2A"/>
+                            <constraint firstItem="o1G-7W-atU" firstAttribute="top" secondItem="BZ4-gq-9yW" secondAttribute="bottom" constant="10" id="NnW-Ok-E2A"/>
                             <constraint firstItem="8D9-ls-9M9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="P7r-WA-Rpj"/>
                             <constraint firstItem="bPF-wb-kPV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QBV-hJ-HiE"/>
                             <constraint firstItem="BZ4-gq-9yW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QmC-Qe-YeD"/>
                             <constraint firstItem="3Oe-7i-ryz" firstAttribute="top" secondItem="HBm-cz-RMa" secondAttribute="bottom" constant="18" id="VcT-pg-I35"/>
                             <constraint firstAttribute="trailing" secondItem="bPF-wb-kPV" secondAttribute="trailing" id="a20-BR-ciD"/>
                             <constraint firstItem="3Oe-7i-ryz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bpw-Le-wvM"/>
-                            <constraint firstItem="BZ4-gq-9yW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="p7Y-yU-1Km"/>
+                            <constraint firstItem="BZ4-gq-9yW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="tdg-HT-JGu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bPF-wb-kPV" secondAttribute="bottom" id="z4d-f4-6QQ"/>
                         </constraints>
                     </view>
